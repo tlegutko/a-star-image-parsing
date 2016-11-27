@@ -1,6 +1,7 @@
 ==============================================
 File name: test01.in
-Execution time: 0.021 s
+Execution time: 0.022 s
+Heuristic function calls: 10
 Number of steps: 2
 Solution:
 position = 1, 1; speed = 0, 0
@@ -10,6 +11,7 @@ position = 2, 2; speed = 0, 0
 ==============================================
 File name: test02.in
 Execution time: 0.001 s
+Heuristic function calls: 18
 Number of steps: 3
 Solution:
 position = 1, 1; speed = 0, 0
@@ -19,7 +21,8 @@ position = 2, 3; speed = 0, 0
 ==============================================
 ==============================================
 File name: test03.in
-Execution time: 0.765 s
+Execution time: 0.788 s
+Heuristic function calls: 5391
 Number of steps: 8
 Solution:
 position = 2, 1; speed = 0, 0
@@ -34,7 +37,8 @@ position = 14, 14; speed = 0, 0
 ==============================================
 ==============================================
 File name: test1000x1000.in
-Execution time: 291.487 s
+Execution time: 328.243 s
+Heuristic function calls: 99404
 Number of steps: 327
 Solution:
 position = 0, 0; speed = 0, 0
