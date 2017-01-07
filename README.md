@@ -8,8 +8,8 @@ So there are always 9 possible state changes:
 
 |               | Y, V<sub>y</sub>                      | Y, V<sub>y</sub> + 1                | Y, V<sub>y</sub> - 1           |
 | ------------- | -------------              |:-------------            | -----              |
-| **X, V<sub>x</sub>**     | X+V<sub>x</sub>, Y+V<sub>y</sub>, V<sub>x</sub>, V<sub>y</sub>            | X+V<sub>x</sub>, Y+V<sub>y</sub>+1, V<sub>x</sub>, V<sub>y</sub>+1        | X+V<sub>x</sub>, Y+V<sub>y</sub>, V<sub>x</sub>, V<sub>y</sub>-1   |
-| **X, V<sub>x</sub> + 1** | X+V<sub>x</sub>+1, Y+V<sub>y</sub>, V<sub>x</sub>+1, V<sub>y</sub>        | X+V<sub>x</sub>+1, Y+V<sub>y</sub>+1, V<sub>x</sub>+1, V<sub>y</sub>+1    | X+V<sub>x</sub>+1, Y+V<sub>y</sub>-1, V<sub>x</sub>, V<sub>y</sub>-1   |
+| **X, V<sub>x</sub>**     | X+V<sub>x</sub>, Y+V<sub>y</sub>, V<sub>x</sub>, V<sub>y</sub>            | X+V<sub>x</sub>, Y+V<sub>y</sub>+1, V<sub>x</sub>, V<sub>y</sub>+1        | X+V<sub>x</sub>, Y+V<sub>y</sub>-1, V<sub>x</sub>, V<sub>y</sub>-1   |
+| **X, V<sub>x</sub> + 1** | X+V<sub>x</sub>+1, Y+V<sub>y</sub>, V<sub>x</sub>+1, V<sub>y</sub>        | X+V<sub>x</sub>+1, Y+V<sub>y</sub>+1, V<sub>x</sub>+1, V<sub>y</sub>+1    | X+V<sub>x</sub>+1, Y+V<sub>y</sub>-1, V<sub>x</sub>+1, V<sub>y</sub>-1   |
 | **X, V<sub>x</sub> - 1** | X+V<sub>x</sub>-1, Y+V<sub>y</sub>, V<sub>x</sub>-1, V<sub>y</sub>        | X+V<sub>x</sub>-1, Y+V<sub>y</sub>+1, V<sub>x</sub>-1, V<sub>y</sub>+1    | X+V<sub>x</sub>-1, Y+V<sub>y</sub>-1, V<sub>x</sub>-1, V<sub>y</sub>-1 |
 At each time step all vehicles must make one of moves above.  
 Two cars cannot be in the same position on map at given time.  
