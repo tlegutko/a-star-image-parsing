@@ -49,6 +49,13 @@ Example:
 
 > FIXME: above example is wrong, create correct one.
 
+## Checking output
+`test_solution.py` script is meant to check correctness of the solution (in terms of state transitions legality) which should be provided in above format.
+Usage:
+```
+test_solution.py [<input file>]
+```
+If `<input file>` is not provided, solution will be read from standard input.
 
 ## Adding new input files:
 1. Create file in `.bmp` format, consisting of following RGB colors:
