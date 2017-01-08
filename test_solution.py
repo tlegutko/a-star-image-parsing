@@ -24,14 +24,14 @@ else:
     eprint("Reading solution from standard input")
     f = sys.stdin
 
-steps, cars = map(int, f.readline().split())
+steps, cars = list(map(int, f.readline().split()))
 prev_states = None
 fail = False
 
 for step in range(steps):
     states = []
     for __ in range(cars):
-        states.append(map(int, f.readline().split()))
+        states.append(list(map(int, f.readline().split())))
 
     # check collisions
     for i in range(cars):
