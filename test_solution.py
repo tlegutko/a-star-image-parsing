@@ -13,6 +13,10 @@ def on_fail():
     global fail
     fail = True
 
+def has_finished(car_state):
+    return car_state[0] == car_state[1] == car_state[2] == car_state[3] == -1
+
+
 if len(sys.argv) > 1:
     f = open(sys.argv[1])
     atexit.register(f.close)
@@ -31,8 +35,12 @@ for step in range(steps):
 
     # check collisions
     for i in range(cars):
+        car1 = states[i]
+        if has_finished(car1):
+            continue
         for j in range(i + 1, cars):
-            car1 = states[i]
+            if has_finished(car2):
+                continue
             car2 = states[j]
             if car1[0] == car2[0] and car1[1] == car2[1]:
                 eprint("Error: collision in step %d, cars %d and %d" % (step, i+1, j+1))
@@ -45,6 +53,18 @@ for step in range(steps):
             oldY, newY = prev_states[i][1], states[i][1]
             oldVx, newVx = prev_states[i][2], states[i][2]
             oldVy, newVy = prev_states[i][3], states[i][3]
+
+            if has_finished(prev_states[i]):
+                continue
+            elif has_finished(states[i]):
+                # check if legally moved to finished state
+                if not oldVx == 0:
+                    eprint("Error: Vx != 0 befor moving to finished state on step %d" % (step))
+                    on_fail()
+                if not oldVy == 0:
+                    eprint("Error: Vy != 0 befor moving to finished state on step %d" % (step))
+                    on_fail()
+                continue
 
             if not oldVx - 1 <= newVx <= oldVx + 1:
                 eprint("Error: illegal Vx change in step %d for car %d: %d -> %d" % (step, i+1, oldVx, newVx))
